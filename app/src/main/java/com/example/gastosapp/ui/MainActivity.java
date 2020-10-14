@@ -30,34 +30,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      listViewGasto = findViewById(R.id.mainListViewGastos);
-        ArrayAdapter<Gasto>adapter = new ArrayAdapter<Gasto>(this,
-                android.R.layout.simple_list_item_1,new GastoDAo().recuperTodosGastos());
-        listViewGasto.setAdapter(adapter);
+     configuraListView();
+        clickDoButton();
 
     }
 
 
     private void clickDoButton() {
-        fabNovoGasto.findViewById(R.id.mainFabNovoGasto);
+        fabNovoGasto.findViewById(R.id.fabNovoGastos);
 
-        fabNovoGasto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), FormGastoActivity.class);
-                startActivityForResult(intent,1);
-                clickDoButton();
-            }
-        });
+      fabNovoGasto.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              Intent intent = new Intent(getApplicationContext(), FormGastoActivity.class);
+              startActivityForResult(intent,1);
+              clickDoButton();
+          }
+      });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        salvaGastosFormulario();
-
-        configuraListView();
     }
 
     @Override
@@ -70,16 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
             adapter.notifyDataSetChanged();
         }
-    }
-
-    private void cliqueBotao(){
-        fabNovoGasto = findViewById(R.id.mainFabNovoGasto);
-        fabNovoGasto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 
 

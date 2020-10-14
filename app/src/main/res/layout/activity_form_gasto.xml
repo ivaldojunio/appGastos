@@ -31,8 +31,8 @@
         android:ems="10"
         android:hint="Data"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/formeditGasto"
-        app:layout_constraintStart_toStartOf="@+id/formeditGasto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formeditGasto" />
 
     <EditText
@@ -45,9 +45,8 @@
         android:ems="10"
         android:hint="Descrição: café, Aluguel, Gasolina, etc..."
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/formeditData"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/formeditData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formeditData" />
 
     <EditText
@@ -60,8 +59,8 @@
         android:ems="10"
         android:hint="Categoria: Aluguel,Transporte, Lazer, etc..."
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/formeeditDescricao"
-        app:layout_constraintStart_toStartOf="@+id/formeeditDescricao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formeeditDescricao" />
 
     <EditText
@@ -73,17 +72,19 @@
         android:ems="10"
         android:hint="Forma de Pagamento: Dinheiro, Debito , Credito"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/formeditCategoria"
-        app:layout_constraintStart_toStartOf="@+id/formeditCategoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formeditCategoria" />
 
     <Button
         android:id="@+id/formButtonSalva"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="Salvar"
-        app:layout_constraintEnd_toEndOf="@+id/formeditFormaPagamento"
-        app:layout_constraintStart_toStartOf="@+id/formeditFormaPagamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formeditFormaPagamento" />
 </androidx.constraintlayout.widget.ConstraintLayout>
